@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add New Task</ion-title>
+    <ion-icon slot="end" size="large" name="close-circle-outline" class="icon-padding" (click)="closePage()"></ion-icon> 
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-textarea placeholder="Enter text" [(ngModel)]="taskName" >Task name</ion-textarea>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Task priority</ion-label>
+            <ion-select [(ngModel)]="taskPriority">
+                <ion-select-option value="P1">P1</ion-select-option>
+                <ion-select-option value="P2">P2</ion-select-option>
+                <ion-select-option value="P3">P3</ion-select-option>
+                <ion-select-option value="P4">P4</ion-select-option>
+            </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Task category</ion-label>
+          <ion-select [(ngModel)]="taskCategory">
+            <ion-select-option value="B2E">B2E</ion-select-option>
+            <ion-select-option value="F2E">F2E</ion-select-option>
+            <ion-select-option value="QA">QA</ion-select-option>
+            <ion-select-option value="PM">PM</ion-select-option>
+        </ion-select>
+        </ion-item>
+      </ion-list>
+</ion-content>
+<ion-button slot="fixed" size="default" color="danger" (click)="addTask()">Add Task</ion-button>
